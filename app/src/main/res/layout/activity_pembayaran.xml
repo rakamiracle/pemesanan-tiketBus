@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PembayaranActivity"
+    android:padding="16dp">
+
+    <!-- Detail pembayaran -->
+    <TextView
+        android:id="@+id/tvDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Detail Pembayaran"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Nama Pemesan -->
+    <EditText
+        android:id="@+id/edtNama"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nama Pemesan"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/tvDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <!-- Jumlah Tiket -->
+    <EditText
+        android:id="@+id/edtJumlah"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Jumlah Tiket"
+        android:inputType="number"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/edtNama"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Promo atau Voucher -->
+    <EditText
+        android:id="@+id/edtPromo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Kode Promo atau Voucher"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/edtJumlah"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- Tombol Gunakan -->
+    <Button
+        android:id="@+id/btnGunakan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gunakan"
+        android:backgroundTint="@color/blue"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/edtPromo"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp" />
+
+    <!-- Metode Pembayaran -->
+    <TextView
+        android:id="@+id/tvMetodePembayaran"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Pilih Metode Pembayaran"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/btnGunakan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <!-- RadioGroup Metode Pembayaran -->
+    <RadioGroup
+        android:id="@+id/rgMetodePembayaran"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvMetodePembayaran"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp">
+
+        <RadioButton
+            android:id="@+id/rbBNI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BNI Virtual Account" />
+
+        <RadioButton
+            android:id="@+id/rbMandiri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mandiri Virtual Account" />
+    </RadioGroup>
+
+    <!-- Tombol Bayar -->
+    <Button
+        android:id="@+id/btnBayar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Bayar"
+        android:backgroundTint="@color/blue"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/rgMetodePembayaran"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

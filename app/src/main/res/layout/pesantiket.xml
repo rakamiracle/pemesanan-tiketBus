@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    tools:context=".PesanTiket">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/tvRute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LMP Lampung - JMB Jambi"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kamis, 01 Januari 2025"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/tvRute"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Pemesan -->
+    <TextView
+        android:id="@+id/tvPemesan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pemesan"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/tvTanggal"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etNamaPemesan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Pemesan"
+        android:padding="10dp"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/tvPemesan"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/etNoHp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nomor Telepon"
+        android:padding="10dp"
+        android:inputType="phone"
+        app:layout_constraintTop_toBottomOf="@id/etNamaPemesan"
+        android:minHeight="48dp" />
+
+    <!-- Data Penumpang -->
+    <TextView
+        android:id="@+id/tvPenumpang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Penumpang"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/etNoHp"
+        android:layout_marginTop="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/etNamaPenumpang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Penumpang"
+        android:padding="10dp"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/tvPenumpang"
+        android:minHeight="48dp"/>
+
+    <EditText
+        android:id="@+id/etJenisKelamin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Jenis Kelamin (Laki-Laki/Perempuan)"
+        android:padding="10dp"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/etNamaPenumpang"
+        android:minHeight="48dp" />
+
+    <!-- Tombol Selanjutnya -->
+    <Button
+        android:id="@+id/btnSelanjutnya"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selanjutnya"
+        app:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/etJenisKelamin"
+        android:layout_marginTop="24dp"
+        android:padding="12dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
